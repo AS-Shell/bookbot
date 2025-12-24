@@ -1,0 +1,6 @@
+def word_counter(file_contents):
+    words = file_contents.split()
+    counter = 0
+    for word in words:
+        counter +=1
+    return counter
