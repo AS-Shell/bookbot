@@ -2,9 +2,15 @@ from stats import word_counter
 from stats import count_characters
 from stats import char_list
 from stats import sort_list
+import sys
+
+if len(sys.argv) < 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
 
 def main():
-    file = "books/frankenstein.txt"
+    file = sys.argv[1]
     file_contents = get_book_text(file)
     words_count = word_counter(file_contents)
     characters_dic = count_characters(file_contents)
